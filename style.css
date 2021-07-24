@@ -967,3 +967,41 @@ textarea {
 	margin-right: auto;
 	margin-bottom: 1.5em;
 }
+
+
+/* Actual theme starts here */
+
+:root {
+	/* --background-color: rgb(23, 48, 22); */
+	--background-color: #fff;
+	--text-color: black;
+	--link-color: darkgrey;
+	--main-indent: 175px;
+	--line-height: 1.25em;
+	--gutter-width: 1.25em;
+	--image-whitespace: calc(.5 * var(--gutter-width));
+	--offset-width: calc(var(--main-indent) - var(--gutter-width));
+	--menu-padding: 0.75em;
+	--header-block-padding: 10px;
+	--header-block-width: 50px;
+	--header-outset: calc(-1 * (var(--main-indent) - var(--header-block-padding) - var(--header-block-width)));
+	--nav-padding: 15px;
+	--font-size-small: 75%;
+}
+
+body {
+	background: var(--background-color);
+	font-family: "arial", "helvetica";
+	color: var(--text-color);
+	font-weight: 400;
+	font-size: 14pt;
+}
+
+#page {
+	max-width: 42em;
+	margin: auto;
+}
+
+#content {
+	padding-left: var(--main-indent);
+}
