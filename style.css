@@ -1005,3 +1005,34 @@ body {
 #content {
 	padding-left: var(--main-indent);
 }
+
+@media screen and (min-width: 600px) {
+	.site-title.big {
+		font-size: 6em;
+	}
+
+	.site-title.big .site-title--and {
+		font-size: 33.3%;
+	}
+
+	.big .site-title--label-wrapper {
+		top: -.05em;
+		left: -30px;
+	}
+
+	.big .site-title--label {
+		font-size: 0.25em;
+	}
+
+	.big .site-title--patterns--row:nth-of-type(n+2) {
+		display: initial;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	:root {
+		--image-whitespace: calc(.25 * var(--gutter-width));
+	}
+
+
+}
