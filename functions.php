@@ -178,3 +178,34 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+add_filter('wp_nav_menu_items', 'wcr_wp_nav_menu_items', 11, 2);
+
+function wcr_wp_nav_menu_items($items, $args) {
+        // you can define multiple theme locations
+	$theme_locations = array('menu-1');
+	$separator = ' |  ';
+	
+	// add the separator just for a defined list of theme_locations
+	if(!isset($args->theme_location) || !in_array($args->theme_location, $theme_locations)){
+		return $items;
+	}
+	
+	// process the list
+	$document = new DOMDocument();
+	$document->loadHTML(mb_convert_encoding($items, 'HTML-ENTITIES', 'UTF-8'));
+
+	$lis = $document->getElementsByTagName('li');
+
+	if (empty($lis)) {
+		return $items;
+	}
+
+	// rebuild the list
+	$new_items = array();
+	foreach ($lis as $li) {
+		$new_items[] = $document->saveXML($li);
+	}
+
+	return implode($separator, $new_items);
+}
+
