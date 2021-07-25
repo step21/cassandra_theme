@@ -650,6 +650,9 @@ textarea {
 .main-navigation {
 	display: block;
 	width: 100%;
+	margin-bottom: 1em;
+	color: #000;
+	background: repeating-linear-gradient(white, white 49.9%, lightgrey 50.1%, lightgrey 100%);
 }
 
 .main-navigation ul {
@@ -695,6 +698,11 @@ textarea {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	color: #000;
+}
+
+.main-navigation a:hover {
+	text-decoration: line-through;
 }
 
 /* Small menu. */
@@ -998,7 +1006,7 @@ body {
 }
 
 #page {
-	max-width: 42em;
+	max-width: 50em;
 	margin: auto;
 }
 
@@ -1018,17 +1026,42 @@ body {
 }
 
 .site-title {
-	display: block;
-	font-size: 2em;
+	display: inline-block;
+	font-size: 5em;
 	line-height: .8em;
-	padding-top: .5em;
+	padding-top: .01em;
 	margin-bottom: .5em;
 	transition: font-size .2s;
 }
 
 .site-title a {
 	text-decoration: none;
+	color: #000;
 	font-weight: 100;
+}
+
+.site-description {
+	font-size: 2em;
+	position: inline-block;
+	margin-left: 0.5em;
+}
+
+.site-main {
+	border-style: solid;
+	border-width: 1px;
+	color: #000;
+	box-shadow: 12px 12px 1px 1px grey;
+}
+
+.entry-header {
+	background: repeating-linear-gradient(white, white 49.9%, lightgrey 50.1%, lightgrey 100%);
+	margin-left: 1em;
+	width: 80%;
+}
+
+.entry-content {
+	margin-left:  1em;
+	margin-right: 1em;
 }
 
 @media screen and (min-width: 600px) {
