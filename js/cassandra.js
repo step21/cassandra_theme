@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
 
  $(function () {
     var count = 0;
-    var styles = ["It's a promise.","It's a contract.","It's a liability", "It's a license.", "It's a prophecy."];
+    var styles = ["It's a promise.","It's a contract.","It's a liability.", "It's a license.", "It's a prophecy."];
     console.log(styles);
 
  setInterval(function () {
