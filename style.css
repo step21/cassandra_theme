@@ -1042,7 +1042,7 @@ body {
 
 .site-description {
 	font-size: 2em;
-	position: inline-block;
+	display: inline-block;
 	margin-left: 0.5em;
 }
 
@@ -1087,9 +1087,16 @@ body {
 	}
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 550px) {
 	:root {
 		--image-whitespace: calc(.25 * var(--gutter-width));
+	}
+	.site-description {
+		display: block;
+		margin-left: unset;
+	}
+	.site-title {
+		display: block;
 	}
 
 
