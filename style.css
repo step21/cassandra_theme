@@ -649,7 +649,7 @@ textarea {
 --------------------------------------------- */
 .main-navigation {
 	display: block;
-	width: 100%;
+	width: calc(100% - 14px);
 	margin-bottom: 1em;
 	color: #000;
 	background: repeating-linear-gradient(white, white 49.9%, lightgrey 50.1%, lightgrey 100%);
@@ -1003,6 +1003,7 @@ body {
 	color: var(--text-color);
 	font-weight: 400;
 	font-size: 14pt;
+	overflow-x: hidden;
 }
 
 #page {
@@ -1023,6 +1024,8 @@ body {
 	padding-bottom: .25em;
 	margin-left: -3em;
 	padding-left: 3em;
+	width: calc(100% + 14px);
+	padding-left: 0; margin-left: 0;
 }
 
 .site-title {
