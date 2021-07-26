@@ -1,28 +1,30 @@
 /* cassandra.js */
 
-var i=1;
-var y=0;
-var styles = ["promise","contract","liability", "license", "prophecy"];
+jQuery(document).ready(function($) {
 
-  
- setInterval(
-   function(){
+
+
+ 
+
+ $(function () {
+    var count = 0;
+    var styles = ["It's a promise.","It's a contract.","It's a liability", "It's a license.", "It's a prophecy."];
+    console.log(styles);
+
+ setInterval(function () {
       
-      
-     $("." + styles[y]).css("z-index", i); 
-     //$("." + styles[y]).css("background-color",colours[y]); 
+     $("span.site-description").text(styles[count % styles.length]);
+     //console.log($("span.site-description")[0].text)
+     //console.log(count % styles.length);
+     //console.log(styles[count % styles.length])
+     //console.log($("span.site-description")[0].outerText);
+     // fadeOut(400, function () {
+     // $(this).text(wordsArray[count % wordsArray.length]).fadeIn(400);
      //i cycle the index
-     i++;
-     //y cycles the array
-     y++;
-     if(y==styles.length){
-       y=0;
-     }
-      
-  },1000)
-  
-
-
+     count++;
+  },1000);
+});
+ 
 // handles
 (function () {
     var threshold = 0,
@@ -60,3 +62,8 @@ var styles = ["promise","contract","liability", "license", "prophecy"];
         }
     }
 })();
+
+}
+
+);
+
